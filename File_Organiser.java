@@ -18,6 +18,8 @@ public class File_Organiser
         System.out.println("Enter the path of the file on which you want to perform the code");
         String filePath = Path(sc.nextLine().trim());
         System.out.println("Your file path is: " + filePath);
+
+        //creating a folder object to work upon the given directory
         File folder = new File(filePath);
         File[] contents = folder.listFiles();
 
@@ -33,7 +35,7 @@ public class File_Organiser
             numberOfFiles++;
         }
 
-
+        //arrays for storing the relevant information
         String Extensions[] = new String[numberOfFiles];
         String nameOfFile[] = new String[numberOfFiles];
         String FilePath[] = new String[numberOfFiles];
@@ -74,7 +76,7 @@ public class File_Organiser
         System.out.println();
 
 
-        //transferring the unsorted files to their respective directories 
+        //moving the files to their respective directories 
         c = 0; 
         for (File temp : contents)
         {
